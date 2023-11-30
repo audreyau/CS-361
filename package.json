@@ -1,5 +1,12 @@
 {
   "scripts": {
-    "start": "node server.js"
+    "start": "concurrently \"npm:server\" \"npm:microservice\"",
+    "server": "node server.js",
+    "microservice": "node microservice.js"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
   }
 }

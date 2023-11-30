@@ -122,7 +122,46 @@
   align-items: center;
 }
 
-#mode-button {
+#hard-button {
+  height: 70px;
+  width: 70px;
+  border: none;
+  margin-left: 40px;
+  font-size: 36px;
+  color: black;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgb(208, 95, 95);
+  color: #fff;
+}
+
+#medium-button {
+  height: 70px;
+  width: 70px;
+  border: none;
+  margin-left: 40px;
+  font-size: 36px;
+  color: black;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgb(237, 203, 79);
+  color: #fff;
+}
+
+#easy-button {
+  height: 70px;
+  width: 70px;
+  border: none;
+  margin-left: 40px;
+  font-size: 36px;
+  color: black;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgb(40, 134, 65);
+  color: #fff;
+}
+
+#story-button {
   height: 70px;
   width: 70px;
   border: none;
@@ -193,7 +232,10 @@
 
 #help-button a,
 #home-button a,
-#mode-button a {
+#easy-button a,
+#medium-button a,
+#hard-button a,
+#story-button a {
   display: block;
   text-decoration: none;
   color: inherit;

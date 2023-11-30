@@ -4,9 +4,9 @@ let problemNumbers = [];
 let userAnswers = [];
 let wrongAnswers = [];
 
-async function getEasyNumber() {
+async function getHardNumber() {
     console.log("Request Sent")
-    const response = await fetch("http://localhost:2000/easy")
+    const response = await fetch("http://localhost:2000/hard")
     const number = await response.text()
     console.log(number)
     return parseInt(number)
@@ -19,8 +19,8 @@ async function generateProblem() {
             num2 = problemNumbers[currentProblem][1];
         } 
         else {
-            num1 = await getEasyNumber();
-            num2 = await getEasyNumber();
+            num1 = await getHardNumber();
+            num2 = await getHardNumber();
             problemNumbers[currentProblem] = [num1, num2];
         }
         
