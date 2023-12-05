@@ -1,5 +1,7 @@
+// Global variables
 let num1, num2, correctAnswer, problemCount, score;
 
+// Generates a new problem based on the specified operation and difficulty
 function generateProblem (operation, difficulty) {
     if (problemCount < 10) {
         clearObsolete(operation, difficulty);
@@ -19,12 +21,14 @@ function generateProblem (operation, difficulty) {
     else { endGame(operation, difficulty); }
 }
 
+// Clears obsolete elements in the DOM
 function clearObsolete (operation, difficulty) {
     document.getElementById('feedback').textContent = '';
     document.getElementById('answer').value = '';
     document.getElementById('result').textContent = '';
 }
 
+// Checks the user's answer and updates the score and problem count
 function checkAnswer (operation, difficulty) {
     const userAnswer = parseInt(document.getElementById('answer').value);
 
@@ -37,6 +41,7 @@ function checkAnswer (operation, difficulty) {
     else { document.getElementById('feedback').textContent = 'Your answer is incorrect. Please try again.'; }
 }
 
+// Ends the game and displays the final score if the score is 10
 function endGame (operation, difficulty){
     if (score == 10) {
         document.getElementById('problem-container').style.display = 'none';
@@ -44,6 +49,7 @@ function endGame (operation, difficulty){
     }
 }
 
+// On page load, initialize variables and generate the first problem
 window.onload = function () {
     const pathArray = window.location.pathname.split('_');
     const difficulty = pathArray[0].replace('/', '');

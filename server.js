@@ -2,9 +2,11 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
+// Create http server
 const server = http.createServer ((req, res) => {
     let filePath;
 
+    // Map requested URLs to corresponding HTML files
     switch (req.url) {
         case '/':
             filePath = './public/index.html';
@@ -40,6 +42,7 @@ const server = http.createServer ((req, res) => {
             filePath = '.' + req.url;
     }
 
+    // Determine the file extension and corresponding content type
     const extname = String(path.extname(filePath)).toLowerCase();
     const contentType = {
         '.html': 'text/html',
@@ -48,6 +51,7 @@ const server = http.createServer ((req, res) => {
         '.png': 'image/png',
     }[extname] || 'application/octet-stream';
 
+    // Read the file content asynchronously
     fs.readFile (filePath, (error, content) => {
         if (error) {
             if (error.code === 'ENOENT') {
@@ -64,6 +68,7 @@ const server = http.createServer ((req, res) => {
     });
 });
 
+// Set port and listen
 const PORT = process.env.PORT || 3000;
 server.listen (PORT, () => {
     console.log (`Server running at http://localhost:${PORT}/`);
