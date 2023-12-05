@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Medium Addition - Math More</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="./public/style.css">
-    <script src="./public/med_addition.js"></script>
-  </head>
+    <head>
+        <title>Medium Addition - Math More</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="./public/style.css">
+        <script src="./public/problems.js"></script>
+    </head>
 
-  <body>
-    <div id="problem-container">
-    <h1>Medium Addition Problems</h1>
-    <p id="problem"></p>
-    <input type="text" id="answer" placeholder="Enter your answer">
-  </div>
+    <body>
+        <div id="problem-container">
+            <h1>Medium Addition Problems</h1>
+            <p id="problem"></p>
+            <input type="text" id="answer" placeholder="Enter your answer">
+        </div>
 
-  <p id="result" style="display: none"></p>
+        <p id="result" style="display: none"></p>
 
-  <div id="navigation-container">
-    <button onclick="previousProblem()" id="previous-button" style="display: none"><i class="fas fa-arrow-left"></i></button>
-    <button onclick="checkAnswer()" id="next-button"><i class="fas fa-arrow-right"></i></button>
-  </div>
+        <div id="navigation-container">
+            <button onclick="previousProblem('addition', 'medium')" id="previous-button" style="display: none"><i class="fas fa-arrow-left"></i></button>
+            <button onclick="checkAnswer('addition', 'medium')" id="next-button"><i class="fas fa-arrow-right"></i></button>
+        </div>
 
-  <button type="button" id="home-button"><a href="/"><i class="fas fa-home"></i></a></button>
-  <button type="button" id="help-button"><a href="/help"><i class="fas fa-question"></i></a></button>
-    
-  </body>
+        <button type="button" id="home-button"><a href="/"><i class="fas fa-home"></i></a></button>
+        <button type="button" id="help-button"><a href="/help"><i class="fas fa-question"></i></a></button>
+    </body>
 </html>
